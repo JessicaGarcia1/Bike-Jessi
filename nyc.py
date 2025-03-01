@@ -7,7 +7,7 @@ st.title('Cicle Rides in NYC')
 DATE_COLUMN = 'started_at'
 DATA_URL = ('citibike-tripdata.csv')
 
-@st.cache
+@st.cache_data
 def load_data(nrows):
     data = pd.read_csv(DATA_URL, nrows=nrows)
     lowercase = lambda x: str(x).lower()
